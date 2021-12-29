@@ -27,9 +27,12 @@ Output
 ```
 class Solution:
     def solve(self, nums):
+        reversed_nums = nums[-1]
         elements = []
-        for i in nums:
+        for i in reversed_nums:
             if i not in elements:
                 elements.append(i)
-        return elements
+            else:
+                reversed_nums.pop(i)
+        return reversed_nums[-1]
 ```
